@@ -26,6 +26,12 @@ class BookMarkManager < Sinatra::Base
     redirect to('/links')
     # Link.create(url: params[:url], title: params[:title])
   end
+
+  get '/tags/:name' do
+    tag = Tag.first(name: params[:name])
+    @links = tag ? tag.links : []
+    erb :'links/index'
+  end
 end
 
 # start the server if ruby file executed directly
