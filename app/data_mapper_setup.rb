@@ -3,6 +3,7 @@ require 'dm-postgres-adapter'
 
 require_relative 'models/tag'
 require_relative 'models/link'
+require_relative 'models/user'
 
 # Now let's set up a connection with a database
 #tells DataMapper to setup by connecting with default database deployed to Heroku otherwise setup  by connecting to localhost database (test,dev). Heroku being prod
